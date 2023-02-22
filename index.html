@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+<div class="container"></div>
+
+<img src="images/menu.png" id="menuIcon">
+
+<div class="menu-box" id="menuBox">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+
+
+<script>
+ let menuBox = document.getElementById('menuBox');
+ let menuIcon = document.getElementById('menuIcon');
+
+
+//adding the click function for menu icon
+menuIcon.onclick = function(){
+    menuBox.classList.toggle('open-menu');
+
+    if(menuBox.classList.contains('open-menu')) {
+        menuIcon.src = 'images/close.png';
+    } else {
+        menuIcon.src = 'images/menu.png';
+    }
+}
+
+</script>
+
+</body>
+</html>
